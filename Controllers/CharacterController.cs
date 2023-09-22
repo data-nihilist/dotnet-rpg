@@ -32,13 +32,22 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> GetSingle(int id)
         {
             // return Ok(characters.FirstOrDefault(c => c.Id == id));
-            return Ok(await _characterService.GetCharacterById(id));
+
+            // return Ok(await _characterService.GetCharacterById(id));
+
+            var response = await _characterService.GetCharacterById(id);
+            if (response.Data is null)
+            {
+                return NotFound(response.Message = "Could not find character using the provided ID.");
+            }
+            return Ok(response);
         }
 
         [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> AddCharacter(AddCharacterDto newCharacter)
         {
-            return Ok(await _characterService.AddCharacter(newCharacter));
+                return Ok(await _characterService.AddCharacter(newCharacter));
+
             // characters.Add(newCharacter);
             // return Ok(characters);
         }

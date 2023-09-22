@@ -21,4 +21,4 @@ And of course, main. Main will most likely be communicating with the entity bran
 
 If you're new to C#, .NET, Entity - make yourself at home! These technologies are incredibly powerful and will only become easier with time.
 
-Coming from a purely JavaScript background, I cannot express how oddly liberating it is to be moving over to the C-suite of programming languages. Much less mystery = many more questions. Awesome!
+Coming from a purely JavaScript background, I cannot express how oddly liberating it is to be moving over to the C programming languages. Much less mystery = many more questions. Awesome!
